@@ -18,16 +18,53 @@ export const mockBlockchainService = {
   }
 };
 
-// Global error handler for blockchain modules
+// Enhanced global error handlers for blockchain modules
 window.addEventListener('error', (event) => {
   if (event.message?.includes('Failed to load module script')) {
-    console.warn('Module loading failed, using fallbacks');
+    console.warn('📦 Module loading failed, using fallbacks');
+    event.preventDefault();
+  }
+  
+  // Ignore wallet provider errors
+  if (event.message?.includes('Cannot assign to read only property')) {
+    console.warn('🔐 Wallet provider conflict detected - ignoring');
+    event.preventDefault();
+  }
+  
+  // Ignore TronWeb errors
+  if (event.message?.includes('TronWeb is already initiated')) {
+    console.warn('🌐 TronWeb already exists - ignoring');
+    event.preventDefault();
   }
 });
 
 window.addEventListener('unhandledrejection', (event) => {
   if (event.reason?.message?.includes('Cannot assign to read only property')) {
-    console.warn('Wallet provider conflict detected');
+    console.warn('🔐 Wallet provider conflict prevented');
+    event.preventDefault();
+  }
+  
+  if (event.reason?.message?.includes('Cannot redefine property')) {
+    console.warn('🔐 Property redefinition prevented');
+    event.preventDefault();
+  }
+  
+  // Ignore blockchain module errors
+  if (event.reason?.message?.includes('Failed to load module script')) {
+    console.warn('📦 Module error handled gracefully');
     event.preventDefault();
   }
 });
+
+// Prevent wallet provider conflicts
+try {
+  (window as any).opnet = (window as any).opnet;
+} catch (error) {
+  console.warn('🔐 opnet property protection applied');
+}
+
+try {
+  (window as any).ethereum = (window as any).ethereum;
+} catch (error) {
+  console.warn('🔐 ethereum property protection applied');
+}

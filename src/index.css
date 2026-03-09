@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
 @theme {
   /* Cappuccino / Beige palette */
   --color-bg-primary: #F5F0E8;
@@ -34,8 +36,6 @@
   --color-accent-light: #C9A84C;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-
 * {
   margin: 0;
   padding: 0;
@@ -44,8 +44,8 @@
 
 body {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  background-color: var(--color-bg-primary);
-  color: var(--color-text-primary);
+  background-color: #F5F0E8 !important;
+  color: #2C2418 !important;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -57,16 +57,63 @@ body {
   flex-direction: column;
 }
 
+/* Ensure background classes work */
+.bg-bg-primary {
+  background-color: #F5F0E8 !important;
+}
+
+.bg-bg-card {
+  background-color: #FFFDF8 !important;
+}
+
+.bg-bg-card-hover {
+  background-color: #FFF9EF !important;
+}
+
+.bg-bg-warm {
+  background-color: #F0E6D4 !important;
+}
+
+/* Text colors */
+.text-text-primary {
+  color: #2C2418 !important;
+}
+
+.text-text-secondary {
+  color: #7A6F5F !important;
+}
+
+.text-text-muted {
+  color: #A69D8E !important;
+}
+
+.text-gold {
+  color: #C9A84C !important;
+}
+
+.text-gold-light {
+  color: #E2C97E !important;
+}
+
+/* Border colors */
+.border-border {
+  border-color: #DDD5C4 !important;
+}
+
+.border-gold {
+  border-color: #C9A84C !important;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-bg-primary);
+  background: #F5F0E8;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-border);
+  background: #DDD5C4;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-gold);
+  background: #C9A84C;
 }
