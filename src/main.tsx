@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { AppProvider } from './context/AppContext'
 import './index.css'
 import './styles/background.css'
+import './utils/blockchainFallback'
 import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(

@@ -13,7 +13,6 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: ['https://esm.sh/opnet@1.8.1-rc.17', 'https://esm.sh/@btc-vision/bitcoin@7.0.0-rc.6'],
       output: {
         manualChunks: (id) => {
           if (id.includes('react') || id.includes('react-dom')) {
