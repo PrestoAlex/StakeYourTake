@@ -1,38 +1,35 @@
-# React + TypeScript + Vite
+# StakeYourTake - Bitcoin Prediction Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+🚀 **Decentralized Bitcoin prediction market built on OP_NET blockchain**
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **📊 Bitcoin Predictions** - Make predictions on Bitcoin price movements
+- **💰 Multi-Token Support** - Stake with BTC, MOTO, and PIIL tokens
+- **⚡ Blockchain Integration** - Real OP_NET blockchain transactions
+- **🎯 Gamified Experience** - Earn reputation, badges, and rewards
+- **💎 Beautiful UI** - Modern design with animations and golden rain effects
+- **📱 Responsive Design** - Works perfectly on desktop and mobile
 
-## React Compiler
+## 🛠 Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Frontend**: React + TypeScript + Vite
+- **Styling**: Tailwind CSS + Framer Motion
+- **Blockchain**: OP_NET + OP20 Tokens
+- **Deployment**: Vercel + GitHub Actions
 
-## Expanding the ESLint configuration
+## 🚀 Quick Start
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
+- Node.js 18+
+- npm or yarn
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Installation
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
+1. **Clone the repository**
+```bash
+git clone https://github.com/yourusername/stakeyourtake.git
+cd stakeyourtake
       parserOptions: {
         project: ['./tsconfig.node.json', './tsconfig.app.json'],
         tsconfigRootDir: import.meta.dirname,
