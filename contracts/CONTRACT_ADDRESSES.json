@@ -1,0 +1,12 @@
+{
+  "contracts": {
+    "prediction": "opt1sqpanuqzxmqxhvllzd9rc2t064c53dl4pqsndyh3t",
+    "stake": "opt1sqrj8l5rraht9aw2s69ye6ugl7yuprf4llccyqyaw",
+    "tip": "opt1sqq9atq0ayd333h2mvexv5dg5gryru5u4nckyzdwk",
+    "like": "opt1sqpus3w732f9dvstuehjn2gpnt3652p569usgwu8e",
+    "comment": "opt1sqqjnrrtggvysex6nqpjqql623gnc3mnd3cmx50hx",
+    "reputation": "opt1sqqhqa7390yc4dte6ppwu47mrt78kretxcgxlt5el"
+  },
+  "network": "testnet",
+  "deployedAt": "2026-03-09T12:37:58.661Z"
+}

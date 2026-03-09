@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@theme {
+  /* Cappuccino / Beige palette */
+  --color-bg-primary: #F5F0E8;
+  --color-bg-secondary: #EDE7DB;
+  --color-bg-card: #FFFDF8;
+  --color-bg-card-hover: #FFF9EF;
+  --color-bg-warm: #F0E6D4;
+
+  /* Gold & Silver accents */
+  --color-gold: #C9A84C;
+  --color-gold-light: #E2C97E;
+  --color-gold-dark: #A68A3E;
+  --color-silver: #A8A8A8;
+  --color-silver-light: #C5C5C5;
+
+  /* Text */
+  --color-text-primary: #2C2418;
+  --color-text-secondary: #7A6F5F;
+  --color-text-muted: #A69D8E;
+
+  /* Confidence */
+  --color-confidence-high: #4CAF50;
+  --color-confidence-medium: #E6A817;
+  --color-confidence-low: #D44638;
+
+  /* Borders */
+  --color-border: #DDD5C4;
+  --color-border-gold: #C9A84C40;
+
+  /* Accent */
+  --color-accent: #8B6914;
+  --color-accent-light: #C9A84C;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gold);
+}

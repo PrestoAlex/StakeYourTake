@@ -1,0 +1,70 @@
+{
+    "functions": [
+        {
+            "name": "addTip",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "tokenAddress",
+                    "type": "ADDRESS"
+                },
+                {
+                    "name": "amount",
+                    "type": "UINT256"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "tipId",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "getCount",
+            "type": "View",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [],
+            "outputs": [
+                {
+                    "name": "count",
+                    "type": "UINT256"
+                }
+            ]
+        },
+        {
+            "name": "onOP20Received",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [
+                {
+                    "name": "from",
+                    "type": "ADDRESS"
+                },
+                {
+                    "name": "to",
+                    "type": "ADDRESS"
+                },
+                {
+                    "name": "amount",
+                    "type": "UINT256"
+                },
+                {
+                    "name": "data",
+                    "type": "BYTES"
+                }
+            ],
+            "outputs": [
+                {
+                    "name": "retval",
+                    "type": "UINT32"
+                }
+            ]
+        }
+    ],
+    "events": []
+}

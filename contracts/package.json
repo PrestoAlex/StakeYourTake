@@ -1,0 +1,38 @@
+{
+  "name": "stakeyourtake-contracts",
+  "version": "1.0.0",
+  "description": "StakeYourTake OP_NET Contracts",
+  "type": "module",
+  "scripts": {
+    "build": "asc assembly/prediction/index.ts --config asconfig.json --use abort=assembly/prediction/index/abort -o ../build/PredictionStorage.wasm --textFile ../build/PredictionStorage.wat",
+    "build:stake": "asc assembly/stake/index.ts --config asconfig.json --use abort=assembly/stake/index/abort -o ../build/StakeTracker.wasm --textFile ../build/StakeTracker.wat",
+    "build:tip": "asc assembly/tip/index.ts --config asconfig.json --use abort=assembly/tip/index/abort -o ../build/TipTracker.wasm --textFile ../build/TipTracker.wat",
+    "build:like": "asc assembly/like/index.ts --config asconfig.json --use abort=assembly/like/index/abort -o ../build/LikeCounter.wasm --textFile ../build/LikeCounter.wat",
+    "build:comment": "asc assembly/comment/index.ts --config asconfig.json --use abort=assembly/comment/index/abort -o ../build/CommentCounter.wasm --textFile ../build/CommentCounter.wat",
+    "build:reputation": "asc assembly/reputation/index.ts --config asconfig.json --use abort=assembly/reputation/index/abort -o ../build/ReputationTracker.wasm --textFile ../build/ReputationTracker.wat",
+    "build:all": "npm run build && npm run build:stake && npm run build:tip && npm run build:like && npm run build:comment && npm run build:reputation",
+    "deploy": "node deploy.ts",
+    "deploy:single": "npx tsx deploy-single.ts",
+    "deploy:all": "npm run build:all && node deploy-all.ts",
+    "deploy:prediction": "npx tsx deploy-single.ts prediction",
+    "deploy:stake": "npx tsx deploy-single.ts stake",
+    "deploy:tip": "npx tsx deploy-single.ts tip",
+    "deploy:like": "npx tsx deploy-single.ts like",
+    "deploy:comment": "npx tsx deploy-single.ts comment",
+    "deploy:reputation": "npx tsx deploy-single.ts reputation"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.28.9",
+    "@btc-vision/as-bignum": "^0.1.2",
+    "@btc-vision/assemblyscript": "^0.29.2",
+    "@btc-vision/btc-runtime": "^1.11.0-rc.10",
+    "@btc-vision/opnet-transform": "^1.2.0"
+  },
+  "devDependencies": {
+    "@btc-vision/bitcoin": "^7.0.0-rc.6",
+    "@btc-vision/transaction": "^1.8.0-rc.10",
+    "dotenv": "^17.3.1",
+    "tsx": "^4.21.0",
+    "typescript": "^5.9.3"
+  }
+}

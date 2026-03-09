@@ -1,0 +1,21 @@
+{
+    "functions": [
+        {
+            "name": "addComment",
+            "type": "Function",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [],
+            "outputs": []
+        },
+        {
+            "name": "getCount",
+            "type": "View",
+            "payable": false,
+            "onlyOwner": false,
+            "inputs": [],
+            "outputs": []
+        }
+    ],
+    "events": []
+}
