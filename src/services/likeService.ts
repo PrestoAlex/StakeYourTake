@@ -173,7 +173,7 @@ export async function getLikeCount(contractAddress, network) {
       }
     }
 
-    const count = properties?.count || 0;
+    const count = (properties as any)?.count || 0;
     console.log('📊 Current like count:', count);
 
     return {

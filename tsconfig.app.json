@@ -27,13 +27,7 @@
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": false,
     "noUncheckedSideEffectImports": false,
-    "noImplicitAny": false,
-    "noImplicitReturns": false,
-    "noImplicitThis": false,
-    "strictBindCallApply": false,
-    "strictFunctionTypes": false,
-    "strictNullChecks": false,
-    "strictPropertyInitialization": false
+    "noImplicitAny": false
   },
   "include": ["src"]
 }

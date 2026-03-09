@@ -19,7 +19,7 @@ function getProvider(): OPNetProvider | null {
   if (typeof window === 'undefined' || !window.opnet) {
     return null;
   }
-  return window.opnet;
+  return window.opnet as any;
 }
 
 async function callProvider(methods: string[], params: any[] = []): Promise<any> {
