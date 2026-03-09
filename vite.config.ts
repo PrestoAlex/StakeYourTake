@@ -15,9 +15,14 @@ export default defineConfig({
     rollupOptions: {
       external: ['https://esm.sh/opnet@1.8.1-rc.17', 'https://esm.sh/@btc-vision/bitcoin@7.0.0-rc.6'],
       output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          blockchain: ['framer-motion', 'lucide-react'],
+        manualChunks: (id) => {
+          if (id.includes('react') || id.includes('react-dom')) {
+            return 'vendor';
+          }
+          if (id.includes('framer-motion') || id.includes('lucide-react')) {
+            return 'blockchain';
+          }
+          return 'index';
         },
       },
     },
