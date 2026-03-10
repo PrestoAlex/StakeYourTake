@@ -28,16 +28,20 @@ export default function App() {
       </div>
       
       <Navbar onCreateOpen={() => setIsCreateOpen(true)} />
-      <main className="flex-1 w-full relative z-10">
+      
+      {/* Main Content */}
+      <div className="main-content flex-1">
+        <main className="flex-1 w-full relative z-10">
           <Routes>
             <Route path="/" element={<Feed />} />
             <Route path="/profile" element={<Profile />} />
             <Route path="/leaderboard" element={<Leaderboard />} />
             <Route path="/guide" element={<Guide />} />
           </Routes>
-      </main>
-      <CreatePredictionModal isOpen={isCreateOpen} onClose={() => setIsCreateOpen(false)} />
-      <MusicController />
+        </main>
+        <CreatePredictionModal isOpen={isCreateOpen} onClose={() => setIsCreateOpen(false)} />
+        <MusicController />
+      </div>
     </div>
   );
 }
